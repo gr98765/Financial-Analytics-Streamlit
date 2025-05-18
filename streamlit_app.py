@@ -9,9 +9,9 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
+###################################################
 # PAGE SETUP
-
-st.title("Financial Analytics Dashboard")  
+st.title("Financial Analytics Dashboard")
 st.markdown("_Prototype v0.4.1_")
 
 
@@ -20,7 +20,9 @@ if uploaded_file is None:
     st.info(" Upload a file through config", icon="ℹ️")
     st.stop()
 
+###################################################
 ## DATA LOADING
+
 @st.cache_data
 def load_data(path:str) -> pd.DataFrame:
     return pd.read_excel(path)
@@ -30,7 +32,10 @@ with st.expander("Data Preview"):
     st.dataframe(
         df,column_config={"Year": st.column_config.NumberColumn(format="%d")},)
 all_months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+###################################################
 #DATA VISUALIZATION
+
 def plot_metric(label, value, prefix="", suffix="", show_graph=False, color_graph=""):
     fig = go.Figure()
 
@@ -114,7 +119,7 @@ def plot_top_right():
                     business_unit,
                     {','.join(all_months)} 
                     FROM df 
-                    WHERE Year='2023' 
+                    WHERE Year='2022' 
                     AND Account='Sales' 
                 ) 
             ON {','.join(all_months)}
@@ -227,7 +232,7 @@ def plot_bottom_right():
 
 #######################################
 # STREAMLIT LAYOUT
-#######################################
+
 
 top_left_column, top_right_column = st.columns((2, 1))
 bottom_left_column, bottom_right_column = st.columns(2)
