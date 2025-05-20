@@ -148,7 +148,7 @@ def plot_top_right():
         color="Scenario",
         barmode="group",
         text_auto=".2s",
-        title="Sales for Year 2023",
+        title="Sales for Year 2022",
         height=400,
     )
     fig.update_traces(
@@ -164,7 +164,7 @@ def plot_bottom_left():
             SELECT 
             Scenario,{','.join(all_months)} 
             FROM df 
-            WHERE Year='2023' 
+            WHERE Year='2022' 
             AND Account='Sales'
             AND business_unit='Software'
         )
