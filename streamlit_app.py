@@ -177,17 +177,17 @@ def plot_bottom_left():
     """
     ).df()
 
-    # fig = px.line(
-    #     sales_data,
-    #     x="month",
-    #     y="sales",
-    #     color="Scenario",
-    #     markers=True,
-    #     text="sales",
-    #     title="Monthly Budget vs Forecast 2022",
-    # )
-    # fig.update_traces(textposition="top center")
-    # st.plotly_chart(fig, use_container_width=True)
+    fig = px.line(
+        sales_data,
+        x="month",
+        y="sales",
+        color="Scenario",
+        markers=True,
+        text="sales",
+        title="Monthly Budget vs Forecast 2022",
+    )
+    fig.update_traces(textposition="top center")
+    st.plotly_chart(fig, use_container_width=True)
 
 
 def plot_bottom_right():
