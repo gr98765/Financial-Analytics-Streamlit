@@ -260,7 +260,7 @@ with top_left_column:
             show_graph=True,
             color_graph="rgba(255, 43, 43, 0.2)",
         )
-        plot_gauge(10, "#FF8700", " days", "In Stock", 31)
+        plot_gauge(10, "#DB7C0F", " days", "In Stock", 31)
 
     with column_3:
         plot_metric("Equity Ratio", 75.38, prefix="", suffix=" %", show_graph=False)
@@ -268,7 +268,7 @@ with top_left_column:
         
     with column_4:
         plot_metric("Debt Equity", 1.10, prefix="", suffix=" %", show_graph=False)
-        plot_gauge(28, "#29B09D", " days", "Delay", 31)
+        plot_gauge(28, "#1EA492", " days", "Delay", 31)
 
 with top_right_column:
     plot_top_right()
