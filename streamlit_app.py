@@ -260,7 +260,7 @@ with top_left_column:
             show_graph=True,
             color_graph="rgba(255, 43, 43, 0.2)",
         )
-        plot_gauge(10, "#DB7C0F", " days", "In Stock", 31)
+        plot_gauge(10, "#B57123", " days", "In Stock", 31)
 
     with column_3:
         plot_metric("Equity Ratio", 75.38, prefix="", suffix=" %", show_graph=False)
