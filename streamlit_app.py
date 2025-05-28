@@ -184,7 +184,7 @@ def plot_bottom_left():
         color="Scenario",
         markers=True,
         text="sales",
-        title="Monthly Budget vs Forecast 2023",
+        title="Monthly Budget vs Forecast 2022",
     )
     fig.update_traces(textposition="top center")
     st.plotly_chart(fig, use_container_width=True)
